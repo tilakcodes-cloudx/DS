@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
 
 void toh(int n,char s,char a,char d)
 {
@@ -7,16 +8,22 @@ void toh(int n,char s,char a,char d)
         printf("\nMove disk 1 from %c to %c",s,d);
         return;
     }
+
     toh(n-1,s,d,a);
     printf("\nMove disk %d from %c to %c",n,s,d);
     toh(n-1,a,s,d);
 }
 
-int main()
+void main()
 {
     int n;
+
+    clrscr();
+
     printf("Enter number of disks: ");
     scanf("%d",&n);
+
     toh(n,'A','B','C');
-    return 0;
+
+    getch();
 }
