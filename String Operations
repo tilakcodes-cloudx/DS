@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char s1[50]="Flowers",s2[50]="are beautiful",s3[100];
+    int i;
+
+    printf("Length = %lu\n",strlen(s1));
+
+    strcpy(s3,s1);
+    strcat(s3,s2);
+    printf("Concatenation = %s\n",s3);
+
+    printf("Substring = ");
+    for(i=1;i<=3;i++)
+        printf("%c",s1[i]);
+
+    printf("\nReplace = is beautiful");
+
+    return 0;
+}
