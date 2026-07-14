@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main()
+{
+    int h[10],i,key,pos;
+
+    for(i=0;i<10;i++)
+        h[i]=-1;
+
+    printf("Enter 5 keys:\n");
+
+    for(i=0;i<5;i++)
+    {
+        scanf("%d",&key);
+        pos=key%10;
+
+        while(h[pos]!=-1)
+            pos=(pos+1)%10;
+
+        h[pos]=key;
+    }
+
+    printf("Hash Table:\n");
+
+    for(i=0;i<10;i++)
+        printf("%d : %d\n",i,h[i]);
+
+    return 0;
+}
