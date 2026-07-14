@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+    int a[]={75,8,1,16,48,3,7,0};
+    int i,j,max,t,n=8;
+
+    for(i=0;i<n-1;i++)
+    {
+        max=i;
+        for(j=i+1;j<n;j++)
+            if(a[j]>a[max])
+                max=j;
+
+        t=a[i];
+        a[i]=a[max];
+        a[max]=t;
+    }
+
+    printf("Descending Order:\n");
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+
+    return 0;
+}
